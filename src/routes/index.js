@@ -8,6 +8,7 @@ const routes = express.Router();
 
 const UserController = require("../app/controllers/UserController");
 const OperatorController = require("../app/controllers/OperatorController");
+const BlackJackController = require("../app/controllers/BlackJackController");
 const AdministratorController = require("../app/controllers/AdministratorController");
 const AuthenticationController = require("../app/controllers/AuthenticationController");
 const AuthenticatedOnly = require("../app/middleware/AuthenticatedOnly");
@@ -42,5 +43,5 @@ routes.post("/isLoggedUserLevel", AuthenticatedOnly.userAccessLevel, UserControl
 routes.post("/isLoggedOperatorLevel", AuthenticatedOnly.operatorAccessLevel, OperatorController.logged);
 routes.post("/isLoggedAdministratorLevel", AuthenticatedOnly.administratorAccessLevel, AdministratorController.logged);
 routes.post("/isLoggedDashBoard", AuthenticatedOnly.administratorAccessLevel, AdministratorController.logged);
-
+routes.post("/test", BlackJackController.probabilidade);
 module.exports = routes;
