@@ -10,9 +10,21 @@ const { getUserFromToken } = require("../helpers/userToken");
 module.exports = {
 
     probabilidade(req, res, next) {
-        const { entrada } = req.body;
+        const { deck, cards, } = req.body;
 
-        res.status(200).json({ sucesso: entrada });
+        let addTooltip = "add", stopTooltip = "stop", splitTooltip = "split",
+            doubleTooltip = "double", hiddenTooltip = "hidden";
+
+        console.log("test", deck, cards);
+
+
+        res.status(200).json({
+            addTooltip,
+            stopTooltip,
+            splitTooltip,
+            doubleTooltip,
+            hiddenTooltip,
+        });
     }
 
 }
