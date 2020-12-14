@@ -12,11 +12,8 @@ module.exports = {
     probabilidade(req, res, next) {
         const { deck, cards, } = req.body;
 
-        let addTooltip = "add", stopTooltip = "stop", splitTooltip = "split",
-            doubleTooltip = "double", hiddenTooltip = "hidden";
-
-        console.log("test", deck, cards);
-
+        let addTooltip = "add teste", stopTooltip = "stop teste", splitTooltip = "split teste",
+            doubleTooltip = "double teste", hiddenTooltip = "hidden teste";
 
         res.status(200).json({
             addTooltip,
