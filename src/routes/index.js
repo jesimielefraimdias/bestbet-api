@@ -43,6 +43,8 @@ routes.post("/isLoggedUserLevel", AuthenticatedOnly.userAccessLevel, UserControl
 routes.post("/isLoggedOperatorLevel", AuthenticatedOnly.operatorAccessLevel, OperatorController.logged);
 routes.post("/isLoggedAdministratorLevel", AuthenticatedOnly.administratorAccessLevel, AdministratorController.logged);
 routes.post("/isLoggedDashBoard", AuthenticatedOnly.administratorAccessLevel, AdministratorController.logged);
-routes.post("/BlackJack", BlackJackController.probabilidade);
+routes.post("/blackJack", BlackJackController.overflowProbability);
+routes.post("/hidden", BlackJackController.hiddenProbability);
+routes.post("/double", BlackJackController.doubleProbability);
 
 module.exports = routes;
